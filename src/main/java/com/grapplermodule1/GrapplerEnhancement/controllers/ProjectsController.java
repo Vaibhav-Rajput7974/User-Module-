@@ -1,6 +1,7 @@
 package com.grapplermodule1.GrapplerEnhancement.controllers;
 
 import com.grapplermodule1.GrapplerEnhancement.customexception.*;
+import com.grapplermodule1.GrapplerEnhancement.dto.ApiResponseProject;
 import com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO;
 import com.grapplermodule1.GrapplerEnhancement.dtos.TeamDTO;
 import com.grapplermodule1.GrapplerEnhancement.entities.Team;
@@ -64,29 +65,15 @@ public class ProjectsController {
      * @return ResponseEntity
      */
 //    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/")
-    public ResponseEntity<?> create(@Valid @RequestBody Project project) {
-        String debugUuid = UUID.randomUUID().toString();
+    @PostMapping("/{projectId}/workspaces/{workspaceId}")
+    public ResponseEntity<ApiResponseProject<Project>> createProject(@PathVariable Long workspaceId,@Valid @RequestBody Project project) {
         try {
-            Optional<Project> addProject = Optional.ofNullable(projectService.createProject(project));
-            log.info("Add new project and their details with uuid{}", debugUuid);
-            if (addProject.isPresent()) {
-                log.info("Add new project and their details if project details is present with uuid{}", debugUuid);
-                return new ResponseEntity<>(new CustomResponse<>(true, "Project Created With Id : " + addProject.get().getId(),  addProject.get().getId()), HttpStatus.OK);
-            } else {
-                log.info("UUID {} Project Not Created", debugUuid);
-                return new ResponseEntity<>(new CustomResponse<>(false, "Project Not Created. Please Try Again", null), HttpStatus.BAD_GATEWAY);
-            }
-        }catch (DataNotPresent dnp){
-            log.error("UUID {} Getting exception while adding a new project with Exception {}", debugUuid, dnp.getMessage());
-            return new ResponseEntity<>(new CustomResponse<>(false, "Do not Pass Empty String, Please Fill the data Properly", null),HttpStatus.NO_CONTENT);
-        }
-        catch (DuplicateProjectName dp){
-            log.error("UUID {} Getting exception while adding a new project with Exception {}", debugUuid, dp.getMessage());
-            return new ResponseEntity<>(new CustomResponse<>(false, "Project name is already in use", null),HttpStatus.CONFLICT);
-        }catch (Exception e) {
-            log.error("UUID {} Getting exception while adding a new project with Exception {}", debugUuid, e.getMessage());
-            return new ResponseEntity<>(new CustomResponse<>(false, "Project Not Created", null), HttpStatus.INTERNAL_SERVER_ERROR);
+            Project createdProject = projectService.createProject(workspaceId, project);
+            log.info("Project created successfully having ID : {}", createdProject.getId());
+            return ResponseEntity.status(HttpStatus.CREATED).body(new ApiResponseProject<>(true, createdProject, "Project created successfully having ID : "+createdProject.getId()));
+        } catch (Exception e) {
+            log.error("Internal Server Error while creating a project", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ApiResponseProject<>(false, null, "Internal Server Error"));
         }
     }
 
@@ -113,6 +100,23 @@ public class ProjectsController {
         catch (Exception e) {
             log.error("UUID {}, Getting Exception in fetch Project BY Id API, Exception {}", debugUuid, e.getMessage());
             return new ResponseEntity<>(new CustomResponse<>(false, e.getMessage(), null),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/{projectId}/workspaces/{workspaceId}")
+    public ResponseEntity<ApiResponseProject<Project>> getProjectByWorkspaceAndProject(@PathVariable Long workspaceId, @PathVariable Long projectId) {
+        try {
+            Project project = projectService.getProjectByWorkspaceAndProject(workspaceId, projectId);
+            if (project != null) {
+                log.info("Project retrieved successfully having ID : {}", projectId);
+                return ResponseEntity.ok(new ApiResponseProject<>(true, project, "Project retrieved successfully having ID : "+projectId));
+            } else {
+                log.warn("Project not found with WorkSpace ID : {} and  Project ID : {}",workspaceId, projectId);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponseProject<>(false, null, "Project not found with WorkSpace ID : "+workspaceId+" and  Project ID : "+projectId));
+            }
+        } catch (Exception e) {
+            log.error("Internal Server Error while retrieving project with ID: " + projectId, e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ApiResponseProject<>(false, null, "Internal Server Error"));
         }
     }
 
@@ -146,31 +150,31 @@ public class ProjectsController {
      * @return ResponseEntity<Project>
      */
 //    @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping("/{projectId}")
-    public ResponseEntity<?> updateById(@Valid @PathVariable Long projectId, @Valid @RequestBody Project project) {
-        String debugUuid = UUID.randomUUID().toString();
-        try{
-            log.info("Inside Updating project with id in service with UUID{}, ", debugUuid);
-            Optional<Project> project1 = Optional.ofNullable(projectService.updateProjectById(projectId, project));
-            return project1.map(value -> new ResponseEntity<>(new CustomResponse<>(true, "Update Project Details Successfully", value), HttpStatus.OK)).orElse(null);
-
-        }catch (DuplicateProjectName dp){
-            log.error("UUID {} Getting exception while Updating a new project Exception {}", debugUuid, dp.getMessage());
-            return new ResponseEntity<>(new CustomResponse<>(false, "Project name is already in use", null),HttpStatus.CONFLICT);
-        }
-        catch (ProjectNotFoundException p){
-            log.error("UUID {}, ProjectNotFoundException in Delete Project BY Id API, Exception {}", debugUuid, p.getMessage());
-            return new ResponseEntity<>(new CustomResponse<>(false, p.getMessage(), false), HttpStatus.NOT_FOUND);
-        }
-        catch (DataNotPresent dnp){
-            log.error("UUID {} Getting exception while adding a new project Exception {}", debugUuid, dnp.getMessage());
-            return new ResponseEntity<>(new CustomResponse<>(false, "Do not Pass Empty String, Please Fill the data Properly", null),HttpStatus.NO_CONTENT);
-        }
-        catch (Exception e) {
-            log.error("UUID {}, Getting Exception in Update Project BY Id API, Exception {}", debugUuid, e.getMessage());
-            return new ResponseEntity<>(new CustomResponse<>(false, e.getMessage(), false),HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+//    @PutMapping("/{projectId}")
+//    public ResponseEntity<?> updateById(@Valid @PathVariable Long projectId, @Valid @RequestBody Project project) {
+//        String debugUuid = UUID.randomUUID().toString();
+//        try{
+//            log.info("Inside Updating project with id in service with UUID{}, ", debugUuid);
+//            Optional<Project> project1 = Optional.ofNullable(projectService.updateProjectById(projectId, project));
+//            return project1.map(value -> new ResponseEntity<>(new CustomResponse<>(true, "Update Project Details Successfully", value), HttpStatus.OK)).orElse(null);
+//
+//        }catch (DuplicateProjectName dp){
+//            log.error("UUID {} Getting exception while Updating a new project Exception {}", debugUuid, dp.getMessage());
+//            return new ResponseEntity<>(new CustomResponse<>(false, "Project name is already in use", null),HttpStatus.CONFLICT);
+//        }
+//        catch (ProjectNotFoundException p){
+//            log.error("UUID {}, ProjectNotFoundException in Delete Project BY Id API, Exception {}", debugUuid, p.getMessage());
+//            return new ResponseEntity<>(new CustomResponse<>(false, p.getMessage(), false), HttpStatus.NOT_FOUND);
+//        }
+//        catch (DataNotPresent dnp){
+//            log.error("UUID {} Getting exception while adding a new project Exception {}", debugUuid, dnp.getMessage());
+//            return new ResponseEntity<>(new CustomResponse<>(false, "Do not Pass Empty String, Please Fill the data Properly", null),HttpStatus.NO_CONTENT);
+//        }
+//        catch (Exception e) {
+//            log.error("UUID {}, Getting Exception in Update Project BY Id API, Exception {}", debugUuid, e.getMessage());
+//            return new ResponseEntity<>(new CustomResponse<>(false, e.getMessage(), false),HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
+//    }
 
     /**
      * For Assigning Team To A Project

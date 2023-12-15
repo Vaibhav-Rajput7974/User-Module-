@@ -51,13 +51,13 @@ public class Company {
 //	//This indicates that these are the "child" entities, and their serialization should be controlled by
 //	// the parent entity
 //	@JsonManagedReference
-//	//When company update refresh create then this also refresh
-//	@OneToMany(mappedBy = "company", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-//	private List<CompanyUserRole> userRole ;
+	//When company update refresh create then this also refresh
+	@OneToMany(mappedBy = "company", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+	private List<CompanyUserRole> userRole ;
 
 
-//	@JsonManagedReference
-//	@OneToMany(mappedBy = "company", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-//	private List<Workspace> workspaces;
+	@JsonManagedReference
+	@OneToMany(mappedBy = "company", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+	private List<Workspace> workspaces;
 
 }

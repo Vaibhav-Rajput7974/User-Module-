@@ -5,13 +5,16 @@ import com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO;
 import com.grapplermodule1.GrapplerEnhancement.dtos.TeamDTO;
 import com.grapplermodule1.GrapplerEnhancement.entities.Project;
 import com.grapplermodule1.GrapplerEnhancement.entities.Team;
+import com.grapplermodule1.GrapplerEnhancement.entities.Workspace;
 import com.grapplermodule1.GrapplerEnhancement.repository.ProjectRepository;
 import com.grapplermodule1.GrapplerEnhancement.repository.TeamRepository;
+import com.grapplermodule1.GrapplerEnhancement.repository.WorkspaceRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -19,6 +22,9 @@ import java.util.stream.Collectors;
 public class ProjectService {
     @Autowired
     private ProjectRepository projectRepository;
+
+    @Autowired
+    private WorkspaceRepository workspaceRepository;
 
     @Autowired
     private TeamService teamService;
@@ -82,22 +88,23 @@ public class ProjectService {
      *
      * @return Project
      */
-    public Project createProject(Project project) {
-        String debugUuid = UUID.randomUUID().toString();
+    public Project createProject(Long workspaceId, Project project) {
         try {
-            if (projectRepository.existsByName(project.getName())) {
-                log.error("Duplicate Project name in, UUID {}", debugUuid);
-                throw new DuplicateProjectName("Project Name is already in use");
+            // Check if the workspace exists
+            Workspace workspace = workspaceRepository.findById(workspaceId).orElse(null);
+            if (workspace == null) {
+                log.error("Workspace not found with ID: " + workspaceId);
+                return null;
             }
-            if (Objects.equals(project.getName(), "")) {
-                log.info("new Project detail is Empty, UUID {}", debugUuid);
-                throw new DataNotPresent("Do not Pass Empty String");
-            }
-            log.info("Create new Project API Called, UUID {}", debugUuid);
-            return projectRepository.save(project);
+            project.setWorkspace(workspace);
+            project.setCreationTime(LocalDateTime.now());
+
+            Project createdProject = projectRepository.save(project);
+            log.info("Project created successfully");
+            return createdProject;
         } catch (Exception e) {
-            log.error("Exception In Add Project Service Exception {}", e.getMessage());
-            throw e;
+            log.error("Error while creating project", e);
+            return null;
         }
     }
 
@@ -255,5 +262,4 @@ public class ProjectService {
             throw e;
         }
     }
-
 }
