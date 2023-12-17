@@ -49,18 +49,11 @@ public class Project {
 //    private List<Task> tasks;
 
 
-    @OneToMany(mappedBy = "parentProject", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Folder> subFolders;
 
-    //	   			@JsonBackReference
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER)
-    private List<Users> users;
-
-    @ManyToMany
-    @JsonBackReference
-    @JoinTable(name = "project_team",
-            joinColumns = @JoinColumn(name = "project_id"),
-            inverseJoinColumns = @JoinColumn(name = "team_id"))
-    private Set<Team> teams;
+//    @ManyToMany
+//    @JsonBackReference
+//    @JoinTable(name = "project_team",
+//            joinColumns = @JoinColumn(name = "project_id"),
+//            inverseJoinColumns = @JoinColumn(name = "team_id"))
+//    private Set<Team> teams;
 }

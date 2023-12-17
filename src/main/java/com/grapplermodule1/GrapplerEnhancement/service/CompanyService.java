@@ -81,12 +81,12 @@ public class CompanyService {
                 throw new DuplicateCompanyException("A company with the same email already exists.");
             }
             company.setCreationTime(LocalDateTime.now());
+            Company createdCompany = companyRepository.save(company);
             Workspace workspace = new Workspace();
             workspace.setName("Default");
             workspace.setCreationTime(LocalDateTime.now());
-            workspace.setCompany(company);
+            workspace.setCompanyId(createdCompany.getId());
             workspaceRepository.save(workspace);
-            Company createdCompany = companyRepository.save(company);
             CompanyDTO createdCompanyDTO = modelMapper.map(createdCompany, CompanyDTO.class);
             logger.info("Company created successfully: {}", createdCompanyDTO.getName());
             return createdCompanyDTO;
@@ -129,9 +129,7 @@ public class CompanyService {
                 if (updatedCompany.getEmail() != null) {
                     existingCompany.setEmail(updatedCompany.getEmail());
                 }
-                if (updatedCompany.getLogo() != null) {
-                    existingCompany.setLogo(updatedCompany.getLogo());
-                }
+
                 if (updatedCompany.getDescription() != null) {
                     existingCompany.setDescription(updatedCompany.getDescription());
                 }
@@ -175,7 +173,7 @@ public class CompanyService {
         try {
             Company existingCompany = companyRepository.findById(id).orElse(null);
             if (existingCompany != null) {
-                workspaceRepository.deleteByCompany_Id(id);
+                workspaceRepository.deleteByCompanyId(id);
                 companyRepository.delete(existingCompany);
                 logger.info("Company deleted successfully with ID: {}", id);
                 return true;
@@ -195,6 +193,9 @@ public class CompanyService {
         return companyRepository.findByEmail(email).orElse(null);
     }
 
+
+
+
     public Company getCompanyById(Long id) {
         return companyRepository.findById(id).orElse(null);
     }
@@ -211,7 +212,7 @@ public class CompanyService {
                     Optional<Company> companyOptional = companyRepository.findById(companyId);
                     if (companyOptional.isPresent()) {
                         Company company = companyOptional.get();
-                        company.setLogo(thumbnailData);
+//                        company.setLogo(thumbnailData);
                         companyRepository.save(company);
 
                         CompanyDTO addLogoCompanyDTO = modelMapper.map(company, CompanyDTO.class);

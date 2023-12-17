@@ -65,7 +65,7 @@ public class ProjectsController {
      * @return ResponseEntity
      */
 //    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/{projectId}/workspaces/{workspaceId}")
+    @PostMapping("/workspaces/{workspaceId}")
     public ResponseEntity<ApiResponseProject<Project>> createProject(@PathVariable Long workspaceId,@Valid @RequestBody Project project) {
         try {
             Project createdProject = projectService.createProject(workspaceId, project);

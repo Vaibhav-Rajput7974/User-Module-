@@ -1,0 +1,20 @@
+
+
+java:S11927"dDefine a constant instead of duplicating this literal "CompanyUserRole not found with ID: " 5 times.(Ç×Í¹8çÀéÆ1
+T
+java:S26297"7Use the built-in formatting to construct this argument.(Ç×Í¹8êÀéÆ1
+T
+java:S2629A"7Use the built-in formatting to construct this argument.(Ç×Í¹8êÀéÆ1
+Y
+java:S2629I"7Use the built-in formatting to construct this argument.(´½“±ÿÿÿÿÿ8ëÀéÆ1
+T
+java:S2629K"7Use the built-in formatting to construct this argument.(Ç×Í¹8ëÀéÆ1
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¿¿¾øÿÿÿÿ
+^
+java:S34577"AFormat specifiers should be used instead of string concatenation.(Ç×Í¹8‡ŸÀéÆ1
+^
+java:S3457A"AFormat specifiers should be used instead of string concatenation.(Ç×Í¹8‰ŸÀéÆ1
+c
+java:S3457I"AFormat specifiers should be used instead of string concatenation.(´½“±ÿÿÿÿÿ8ŒŸÀéÆ1
+^
+java:S3457K"AFormat specifiers should be used instead of string concatenation.(Ç×Í¹8ŒŸÀéÆ1

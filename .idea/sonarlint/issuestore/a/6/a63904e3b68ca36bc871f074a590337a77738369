@@ -1,0 +1,20 @@
+
+§
+java:S1192Ω"ƒDefine a constant instead of duplicating this literal "Update Reporting Hierarchy Service Throw IllegalArgumentException " 3 times.(βϋΞύÿÿÿÿ8θ³δηΖ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ΏΏΎψÿÿÿÿ8σ³δηΖ1
+u
+java:S2139A"XEither log this exception and handle it, or rethrow it with some contextual information.(”ύΎ8‘µδηΖ1
+u
+java:S2139b"XEither log this exception and handle it, or rethrow it with some contextual information.(”ύΎ8—µδηΖ1
+u
+java:S2139y"XEither log this exception and handle it, or rethrow it with some contextual information.(”ύΎ8›µδηΖ1
+v
+java:S2139"XEither log this exception and handle it, or rethrow it with some contextual information.(”ύΎ8ΆµδηΖ1
+`
+java:S1854ª"=Remove this useless assignment to local variable "debugUuid".(χ«αμύÿÿÿÿ8¤µδηΖ1
+Q
+java:S1481ª".Remove this unused "debugUuid" local variable.(χ«αμύÿÿÿÿ8¥µδηΖ1
+v
+java:S2139½"XEither log this exception and handle it, or rethrow it with some contextual information.(”ύΎ8©µδηΖ1
+v
+java:S2139χ"XEither log this exception and handle it, or rethrow it with some contextual information.(”ύΎ8·µδηΖ1

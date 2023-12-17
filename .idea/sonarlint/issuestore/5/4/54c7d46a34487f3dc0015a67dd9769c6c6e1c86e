@@ -1,0 +1,9 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìé³µ
+G	java:S106"+Replace this use of System.out by a logger.(ğöı¼8ŞÓòèÆ1
+u
+java:S1128"_Remove this unused import 'com.grapplermodule1.GrapplerEnhancement.controllers.UserController'.(³“¾•
+B
+java:S1128"-Remove this unused import 'org.slf4j.Logger'.(íØ®6
+J
+java:S1128"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ

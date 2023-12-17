@@ -1,0 +1,18 @@
+
+
+java:S1192i"rDefine a constant instead of duplicating this literal "UUID {} Exception In Create Team API Exception {}" 3 times.(¤•­„8Â°åšÇ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õŸ–Àøÿÿÿÿ8Ç°åšÇ1
+S
+java:S3416"1Update this logger to use "TeamController.class".(ÎÉê¼ûÿÿÿÿ8Ï°åšÇ1
+H
+java:S1452("&Remove usage of generic wildcard type.(ÀÚ­áùÿÿÿÿ8Ø°åšÇ1
+H
+java:S1452B"&Remove usage of generic wildcard type.(ø×Ğşÿÿÿÿ8à°åšÇ1
+C
+java:S1452["&Remove usage of generic wildcard type.(ÀÎ’8æ°åšÇ1
+C
+java:S1452}"&Remove usage of generic wildcard type.(ŒÉ‚Ê8í°åšÇ1
+I
+java:S1452—"&Remove usage of generic wildcard type.(Ñ«‹ƒúÿÿÿÿ8ğ°åšÇ1
+I
+java:S1452²"&Remove usage of generic wildcard type.(µÌß•ûÿÿÿÿ8ô°åšÇ1

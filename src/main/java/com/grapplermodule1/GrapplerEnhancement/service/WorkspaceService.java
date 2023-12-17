@@ -32,7 +32,7 @@ public class WorkspaceService {
 
     public List<WorkspaceDTO> getAllWorkspaces(Long companyId) {
         try {
-            List<Workspace> workspaces = workspaceRepository.findByCompany_Id(companyId);
+            List<Workspace> workspaces = workspaceRepository.findByCompanyId(companyId);
             logger.info("Retrieved all workspaces for company ID : {} successfully.",companyId);
 
             // Convert Workspace objects to WorkspaceDTO using ModelMapper
@@ -47,7 +47,7 @@ public class WorkspaceService {
 
     public WorkspaceDTO getWorkspace(Long companyId, Long workspaceId) {
         try {
-            Workspace workspace = workspaceRepository.findByIdAndCompany_Id(workspaceId, companyId).orElse(null);
+            Workspace workspace = workspaceRepository.findByIdAndCompanyId(workspaceId, companyId).orElse(null);
             if (workspace != null) {
             logger.info("Retrieved workspace ID : {} successfully.",workspaceId);
                 return modelMapper.map(workspace, WorkspaceDTO.class);
@@ -71,7 +71,7 @@ public class WorkspaceService {
             // Convert WorkspaceDTO to Workspace using ModelMapper
             Workspace workspace = modelMapper.map(workspaceDTO, Workspace.class);
             workspace.setCreationTime(LocalDateTime.now());
-            workspace.setCompany(company);
+            workspace.setCompanyId(companyId);
 
             Workspace createdWorkspace = workspaceRepository.save(workspace);
             logger.info("Workspace created successfully for company {}: {}", companyId, createdWorkspace.getName());
@@ -93,7 +93,7 @@ public class WorkspaceService {
                 // Convert WorkspaceDTO to Workspace using ModelMapper
                 Workspace updatedWorkspace = modelMapper.map(updatedWorkspaceDTO, Workspace.class);
                 updatedWorkspace.setId(existingWorkspace.getId());
-                updatedWorkspace.setCompany(existingWorkspace.getCompany());
+                updatedWorkspace.setCompanyId(companyId);
                 updatedWorkspace.setCreationTime(existingWorkspace.getCreationTime());
 
                 Workspace savedWorkspace = workspaceRepository.save(updatedWorkspace);
@@ -114,13 +114,8 @@ public class WorkspaceService {
         try {
             Workspace existingWorkspace = getWorkspaceDB(companyId, workspaceId);
             if (existingWorkspace != null) {
-                Company company = existingWorkspace.getCompany();
-
                 // Check if the workspace being deleted is the default workspace.
                 boolean isDefaultWorkspace = existingWorkspace.getName().equals("Default");
-
-                // Remove the workspace from the company's list of workspaces.
-                company.getWorkspaces().remove(existingWorkspace);
                 projectRepository.deleteByWorkspace_Id(workspaceId);
 
                 // Delete the workspace.
@@ -138,7 +133,7 @@ public class WorkspaceService {
     }
     public Workspace getWorkspaceDB(Long companyId, Long workspaceId) {
         try {
-            return workspaceRepository.findByIdAndCompany_Id(workspaceId, companyId).orElse(null);
+            return workspaceRepository.findByIdAndCompanyId(workspaceId, companyId).orElse(null);
         } catch (Exception e) {
             logger.error("Error while getting workspace with ID " + workspaceId + " for company " + companyId, e);
             return null;

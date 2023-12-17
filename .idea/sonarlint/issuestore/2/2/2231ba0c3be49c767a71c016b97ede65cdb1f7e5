@@ -1,0 +1,18 @@
+
+…
+java:S1488Î"gImmediately return this expression instead of assigning it to the temporary variable "teamMembersDTOs".(¥‘—Ü8ÙûäçÆ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¿¿¾øÿÿÿÿ8İûäçÆ1
+W
+java:S3416"5Update this logger to use "TeamMembersService.class".(ÎÉê¼ûÿÿÿÿ8£üäçÆ1
+]	java:S125/"<This block of commented-out lines of code should be removed.(³¶¨æıÿÿÿÿ8ªüäçÆ1
+X	java:S125^"<This block of commented-out lines of code should be removed.(ÿÂ”—8îôèÆ1
+u
+java:S2139n"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8´üäçÆ1
+v
+java:S2139—"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8»üäçÆ1
+{
+java:S2139¾"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8ÂüäçÆ1
+v
+java:S2139Ô"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8ÆüäçÆ1
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8ûôèÆ1

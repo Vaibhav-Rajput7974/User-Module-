@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface CompanyUserRoleRepository extends JpaRepository<CompanyUserRole, Long> {
-    @Query("SELECT cu.role FROM CompanyUserRole cu WHERE cu.user.id = :userId AND cu.company.id = :companyId")
+    @Query("SELECT cu.role FROM CompanyUserRole cu WHERE cu.user.id = :userId AND cu.companyId = :companyId")
     RoleEnum findRoleByUserIdAndCompanyId(@Param("userId") Long userId, @Param("companyId") Long companyId);
     @Modifying
     @Transactional

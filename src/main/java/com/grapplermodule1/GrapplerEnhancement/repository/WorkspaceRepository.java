@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface WorkspaceRepository extends JpaRepository<Workspace, Long>{
-    Optional<Workspace> findByIdAndCompany_Id(Long id, Long companyId);
+    Optional<Workspace> findByIdAndCompanyId(Long id, Long companyId);
 
-    List<Workspace> findByCompany_Id(Long companyId);
-    void deleteByCompany_Id(Long companyId);
+    List<Workspace> findByCompanyId(Long companyId);
+    void deleteByCompanyId(Long companyId);
 }

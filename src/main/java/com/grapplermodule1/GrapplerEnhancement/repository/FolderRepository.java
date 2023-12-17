@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface FolderRepository extends JpaRepository<Folder,Long> {
-  List<Folder> findAllByParentProject_Id(Long projectId);
+  List<Folder> findAllByProjectId(Long projectId);
   @Modifying
   @Transactional
   @Query("DELETE FROM Folder f WHERE f.id = :id")

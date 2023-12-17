@@ -35,7 +35,5 @@ public class CompanyUserRole {
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
 	private Users user ;
 
-	@JsonBackReference
-	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH} , fetch = FetchType.EAGER)
-	private Company company ;
+	private Long companyId ;
 }

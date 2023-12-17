@@ -1,0 +1,50 @@
+
+Ÿ
+java:S11926"}Define a constant instead of duplicating this literal "Throws exception because there no project found with UUID {}" 3 times.(¨ì‰éøÿÿÿÿ8›±ÚšÇ1
+Y
+java:S2629`"7Use the built-in formatting to construct this argument.(àˆÒóûÿÿÿÿ8»×êÆ1
+T
+java:S2629w"7Use the built-in formatting to construct this argument.(Ä¹ığ8ÄÙäçÆ1
+Y
+java:S2629z"7Use the built-in formatting to construct this argument.(ê­âıÿÿÿÿ8ÅÙäçÆ1
+T
+java:S2629"7Use the built-in formatting to construct this argument.(Œ¦#8ïÀÎéÆ1
+T
+java:S2629Å"7Use the built-in formatting to construct this argument.(Œ¦#8ªäÔéÆ1
+Z
+java:S4973×"<Strings and Boxed types should be compared using "equals()".(…•Œ›8¥İØšÇ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¿¿¾øÿÿÿÿ8ÍÙäçÆ1
+N
+java:S16021",Remove useless curly braces around statement(×çÎÍûÿÿÿÿ8Ü±ÚšÇ1
+u
+java:S21399"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8şÚäçÆ1
+N
+java:S1602H",Remove useless curly braces around statement(óÎ‚ÿÿÿÿÿ8ß±ÚšÇ1
+u
+java:S2139P"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8…ÛäçÆ1
+c
+java:S3457`"AFormat specifiers should be used instead of string concatenation.(àˆÒóûÿÿÿÿ8×êÆ1
+^
+java:S3457w"AFormat specifiers should be used instead of string concatenation.(Ä¹ığ8öÚäçÆ1
+c
+java:S3457z"AFormat specifiers should be used instead of string concatenation.(ê­âıÿÿÿÿ8ùÚäçÆ1
+v
+java:S2139"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8§ÛäçÆ1
+^
+java:S3457"AFormat specifiers should be used instead of string concatenation.(Œ¦#8ƒÂÎéÆ1
+v
+java:S2139¨"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8úùÍšÇ1
+^
+java:S3457Å"AFormat specifiers should be used instead of string concatenation.(Œ¦#8­åÔéÆ1
+V
+java:S1854Ó"8Remove this useless assignment to local variable "team".(ª·Íû8æùÍšÇ1
+G
+java:S1481Ó")Remove this unused "team" local variable.(ª·Íû8÷İØšÇ1
+M
+java:S1611×"/Remove the parentheses around the "t" parameter(…•Œ›8êùÍšÇ1
+v
+java:S2139İ"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8÷±ÚšÇ1
+p
+java:S6204‚"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8şİØšÇ1
+v
+java:S2139„"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8„²ÚšÇ1

@@ -28,9 +28,6 @@ public class Company {
 	@Column(unique = true,nullable = false)
 	private String email;
 
-	@Column(columnDefinition = "LONGBLOB")
-	@Basic(fetch = FetchType.LAZY)
-	private byte[] logo;
 
 	@Size(max = 255, message = "Description should not exceed 255 characters")
 	private String description;
@@ -50,14 +47,5 @@ public class Company {
 
 //	//This indicates that these are the "child" entities, and their serialization should be controlled by
 //	// the parent entity
-//	@JsonManagedReference
-	//When company update refresh create then this also refresh
-	@OneToMany(mappedBy = "company", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<CompanyUserRole> userRole ;
-
-
-	@JsonManagedReference
-	@OneToMany(mappedBy = "company", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Workspace> workspaces;
 
 }

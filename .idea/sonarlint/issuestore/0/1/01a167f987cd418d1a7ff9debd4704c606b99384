@@ -1,0 +1,12 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ø¼é
+Q	java:S125("<This block of commented-out lines of code should be removed.(áðþ
+V	java:S1254"<This block of commented-out lines of code should be removed.(†Üõõÿÿÿÿÿ
+l
+java:S1128"VRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.dtos.HierarchyDTO'.(Î¨Ú
+o
+java:S1128"TRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO'.(µ«œ‚üÿÿÿÿ
+k
+java:S1128"URemove this unused import 'com.grapplermodule1.GrapplerEnhancement.entities.Project'.(‘æ´”
+b
+java:S1128"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šô

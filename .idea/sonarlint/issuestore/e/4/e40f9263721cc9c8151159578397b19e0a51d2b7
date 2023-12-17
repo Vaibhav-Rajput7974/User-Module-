@@ -1,0 +1,29 @@
+
+Š
+java:S1192G"hDefine a constant instead of duplicating this literal "Exception In Get All Teams Exception {}" 3 times.(—ô—–ıÿÿÿÿ8ÀùäšÇ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¿¿¾øÿÿÿÿ8ÄùäšÇ1
+ƒ
+java:S3655["fCall "optionalListOfUsers.isPresent()" or "!optionalListOfUsers.isEmpty()" before accessing the value.(¥Ì’8àùäšÇ1
+P
+java:S3416".Update this logger to use "TeamService.class".(ÎÉê¼ûÿÿÿÿ8áùäšÇ1
+H
+java:S1602;",Remove useless curly braces around statement(¯¿ˆ(8çùäšÇ1
+z
+java:S2139F"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8èùäšÇ1
+z
+java:S2139^"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8ëùäšÇ1
+z
+java:S2139x"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8îùäšÇ1
+J
+java:S1602—",Remove useless curly braces around statement(¨Îµ¦8ôùäšÇ1
+{
+java:S2139"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8£úäšÇ1
+Y	java:S125®"<This block of commented-out lines of code should be removed.(çëĞ‡8¨œÎ›Ç1
+^	java:S125±"<This block of commented-out lines of code should be removed.(îò¨šøÿÿÿÿ8¨œÎ›Ç1
+^	java:S125¶"<This block of commented-out lines of code should be removed.(‡şÓùÿÿÿÿ8©œÎ›Ç1
+{
+java:S2139¿"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8µúäšÇ1
+v
+java:S2139İ"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8ºúäšÇ1
+{
+java:S2139ö"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8®œÎ›Ç1

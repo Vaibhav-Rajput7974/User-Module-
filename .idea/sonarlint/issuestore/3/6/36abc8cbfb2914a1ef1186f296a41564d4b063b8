@@ -1,0 +1,39 @@
+
+m
+java:S1192Ç"ODefine a constant instead of duplicating this literal "User Not Found" 3 times.(¾³é•8ÅñåçÆ1
+:
+java:S1643‘"Use a StringBuilder instead.(°çÊÑ8ËñåçÆ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¿¿¾øÿÿÿÿ8×ñåçÆ1
+n
+java:S3655¢"PCall "usersDTO.isPresent()" or "!usersDTO.isEmpty()" before accessing the value.(¿ÇéË8çôåçÆ1
+]	java:S125"<This block of commented-out lines of code should be removed.(ÄİÈâüÿÿÿÿ8èôåçÆ1
+P
+java:S3416=".Update this logger to use "UserService.class".(¬³£­úÿÿÿÿ8éôåçÆ1
+X	java:S1250"<This block of commented-out lines of code should be removed.(¿¤è˜8îôåçÆ1
+u
+java:S2139Y"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8öôåçÆ1
+u
+java:S2139k"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8úôåçÆ1
+v
+java:S2139¦"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8ˆõåçÆ1
+v
+java:S2139¼"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8ŒõåçÆ1
+]
+java:S1854×"?Remove this useless assignment to local variable "updatedUser".(ñ›ê8õåçÆ1
+N
+java:S1481×"0Remove this unused "updatedUser" local variable.(ñ›ê8”õåçÆ1
+v
+java:S2139æ"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8ŸõåçÆ1
+^	java:S125ü"<This block of commented-out lines of code should be removed.(³ø¿Ëÿÿÿÿÿ8¦õåçÆ1
+v
+java:S2139‡"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8©õåçÆ1
+v
+java:S2139´"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8´õåçÆ1
+{
+java:S2139Ñ"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8ÑöåçÆ1
+{
+java:S2139î"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8áöåçÆ1
+v
+java:S2139„"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8éöåçÆ1
+{
+java:S2139¡"XEither log this exception and handle it, or rethrow it with some contextual information.(ñ“Š±üÿÿÿÿ8óöåçÆ1

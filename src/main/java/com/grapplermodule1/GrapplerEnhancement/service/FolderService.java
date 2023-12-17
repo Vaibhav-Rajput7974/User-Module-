@@ -27,10 +27,13 @@ public class FolderService {
     @Autowired
     private FolderRepository folderRepository;
 
+    @Autowired
+    private CompanyService companyService;
+
     public List<Folder> getAllFolders(Long projectId) {
         Optional<Project> project = projectRepository.findById(projectId);
         if (project.isPresent()) {
-            List<Folder> folders = folderRepository.findAllByParentProject_Id(projectId);
+            List<Folder> folders = folderRepository.findAllByProjectId(projectId);
                 logger.info("Retrieved all folders successfully with Project ID : {}",projectId);
                 return folders;
         } else {
@@ -59,7 +62,7 @@ public class FolderService {
             {
                throw new UnsupportedOperationException("Unable to create Folder Company Structure Type is not Hierarchical");
             }
-            folder.setParentProject(project);
+            folder.setProjectId(projectId);
             Folder createdFolder = folderRepository.save(folder);
             logger.info("Folder created successfully with ID: {}", createdFolder.getId());
             return createdFolder;
@@ -171,7 +174,8 @@ public class FolderService {
 public boolean isCompanyStructureTypeHierarchical(Project project)
 {
     Workspace workspace = project.getWorkspace();
-    Company company = workspace.getCompany();
+    Long companyId = workspace.getCompanyId();
+    Company company = companyService.getCompanyById(companyId);
     String companyStructureType = String.valueOf(company.getStructureType());
     if(companyStructureType.equals("HIERARCHICAL")) {
         return true;

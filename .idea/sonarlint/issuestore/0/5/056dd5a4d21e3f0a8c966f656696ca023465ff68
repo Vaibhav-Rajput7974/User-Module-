@@ -1,0 +1,8 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ί›•
+V	java:S125E"<This block of commented-out lines of code should be removed.(Ζ©‘πώÿÿÿÿ
+W	java:S125‹"<This block of commented-out lines of code should be removed.(²Όόÿÿÿÿ
+^
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ώ‘‹„
+O
+java:S1068?"-Remove this unused "projectId" private field.(Ά†»¶ϋÿÿÿÿ8λ±®Η1

@@ -64,8 +64,9 @@ public class CompanyController {
 	}
 
 	@PostMapping
-	public ResponseEntity<ApiResponseProject<CompanyDTO>> createCompany(@Valid @RequestBody Company company) {
+	public ResponseEntity<ApiResponseProject<CompanyDTO>> createCompany( @RequestBody Company company) {
 		try {
+			logger.info("Heeel");
 			CompanyDTO createdCompany = companyService.createCompany(company);
 			if (createdCompany != null) {
 				logger.info("Company created successfully: {}", createdCompany.getName());

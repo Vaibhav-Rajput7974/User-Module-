@@ -1,0 +1,12 @@
+
+Q
+java:S3740B"/Provide the parametrized type for this generic.(Û‰Üˆúÿÿÿÿ8æà¼êÆ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õŸ–Àøÿÿÿÿ8íà¼êÆ1
+H
+java:S1452#"&Remove usage of generic wildcard type.(ßš•Æÿÿÿÿÿ8±á¼êÆ1
+\
+java:S1854H"@Remove this useless assignment to local variable "updateStatus".(ı•Ùh8¸á¼êÆ1
+M
+java:S1481H"1Remove this unused "updateStatus" local variable.(ı•Ùh8»á¼êÆ1
+w
+java:S1128"URemove this unused import 'org.springframework.security.access.prepost.PreAuthorize'.(ˆ†×ùÿÿÿÿ8Àá¼êÆ1

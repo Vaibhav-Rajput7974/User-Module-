@@ -25,17 +25,14 @@ public class CompanyUserRoleService {
     private final Logger logger = LoggerFactory.getLogger(CompanyUserRoleService.class);
 
     public CompanyUserRole addCompanyUserRole(Long companyId, Long userId, CompanyUserRole companyUserRole){
-        Company company = companyService.getCompanyById(companyId);
-        if(company == null) {
-            throw  new NotFoundException("Company Not Found on this Id : "+companyId);
-        }
+
         Users user = userService.getUserById(userId);
         if(user == null) {
             throw  new NotFoundException("User Not Found on this Id : "+userId);
         }
         RoleEnum role = findRoleByUserIdAndCompanyId(userId,companyId);
         if(role == null) {
-            companyUserRole.setCompany(company);
+            companyUserRole.setCompanyId(companyId);
             companyUserRole.setUser(user);
             CompanyUserRole savedCompanyUserRole = companyUserRoleRepository.save(companyUserRole);
             logger.info("Added CompanyUserRole with ID: " + savedCompanyUserRole.getId());

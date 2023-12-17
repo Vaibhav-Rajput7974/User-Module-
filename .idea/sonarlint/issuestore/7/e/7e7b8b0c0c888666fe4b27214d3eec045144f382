@@ -1,0 +1,10 @@
+
+h
+java:S1192:"RDefine a constant instead of duplicating this literal "Company not found" 3 times.(¨ÀÆ¨
+y
+java:S11929"^Define a constant instead of duplicating this literal "Company not found with ID: {}" 3 times.(‡îß†ûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õŸ–Àøÿÿÿÿ
+C
+java:S1452l"&Remove usage of generic wildcard type.(£Í®õ8ãÑğëÆ1
+I
+java:S1452ƒ"&Remove usage of generic wildcard type.(ÑÍÿ‡øÿÿÿÿ8æÑğëÆ1

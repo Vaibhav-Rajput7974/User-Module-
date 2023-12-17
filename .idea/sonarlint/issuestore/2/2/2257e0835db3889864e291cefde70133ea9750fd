@@ -1,0 +1,20 @@
+
+d
+java:S11927"NDefine a constant instead of duplicating this literal " for company " 4 times.(åß¡
+M
+java:S26297"7Use the built-in formatting to construct this argument.(åß¡
+R
+java:S2629C"7Use the built-in formatting to construct this argument.(¼«ËÄûÿÿÿÿ
+R
+java:S2629|"7Use the built-in formatting to construct this argument.(²ğ²Êûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¿¿¾øÿÿÿÿ
+o
+java:S6204)"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ïèéÆ1
+H
+java:S1168,"+Return an empty collection instead of null.(¥¹ï8òèéÆ1
+W
+java:S34577"AFormat specifiers should be used instead of string concatenation.(åß¡
+\
+java:S3457C"AFormat specifiers should be used instead of string concatenation.(¼«ËÄûÿÿÿÿ
+\
+java:S3457|"AFormat specifiers should be used instead of string concatenation.(²ğ²Êûÿÿÿÿ

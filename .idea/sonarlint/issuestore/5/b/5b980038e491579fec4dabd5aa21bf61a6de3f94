@@ -1,0 +1,33 @@
+
+r
+java:S1192="\Define a constant instead of duplicating this literal "Company not found with ID: " 3 times.(ÉŸ£Â
+M
+java:S2629="7Use the built-in formatting to construct this argument.(ÉŸ£Â
+N
+java:S2629™"7Use the built-in formatting to construct this argument.(ÉŸ£Â
+N
+java:S2629µ"7Use the built-in formatting to construct this argument.(ÉŸ£Â
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½¿¿¾øÿÿÿÿ
+o
+java:S6204."RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ú’û˜Ç1
+H
+java:S11681"+Return an empty collection instead of null.(¥¹ï8ÃÓÇìÆ1
+W
+java:S3457="AFormat specifiers should be used instead of string concatenation.(ÉŸ£Â
+u
+java:S2139`"XEither log this exception and handle it, or rethrow it with some contextual information.(âÂï‹8Å™Ç™Ç1
+]	java:S125a"<This block of commented-out lines of code should be removed.(ŸşÉ®şÿÿÿÿ8Å™Ç™Ç1
+t
+java:S3776m"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.( €ÛŞûÿÿÿÿ8Ç™Ç™Ç1
+_
+java:S3457™"AFormat specifiers should be used instead of string concatenation.(ÉŸ£Â8Ğ™Ç™Ç1
+v
+java:S2139Ÿ"XEither log this exception and handle it, or rethrow it with some contextual information.(âÂï‹8Ñ™Ç™Ç1
+^	java:S125 "<This block of commented-out lines of code should be removed.(ŸşÉ®şÿÿÿÿ8Ò™Ç™Ç1
+_
+java:S3457µ"AFormat specifiers should be used instead of string concatenation.(ÉŸ£Â8Õ™Ç™Ç1
+k	java:S100Ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±àş—8Ù™Ç™Ç1
+U
+java:S1481Ò"2Remove this unused "thumbnailData" local variable.(üÀİÉıÿÿÿÿ8Û™Ç™Ç1
+Y	java:S125×"<This block of commented-out lines of code should be removed.(ì÷³£8Ü™Ç™Ç1
+Y	java:S125ó"<This block of commented-out lines of code should be removed.(öÓé¿8à™Ç™Ç1

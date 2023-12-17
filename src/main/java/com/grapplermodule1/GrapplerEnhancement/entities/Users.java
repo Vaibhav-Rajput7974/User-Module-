@@ -60,6 +60,8 @@
         @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
         private List<TeamMembers> teamMembers;
 
+        private Long projectId;
+
 
 //        @JsonIgnore
 //        @JsonBackReference

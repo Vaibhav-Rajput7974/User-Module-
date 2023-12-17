@@ -1,0 +1,8 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ø¼é
+s
+java:S1128"XRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.entities.Permission'.(ü¦¶Êþÿÿÿÿ
+t
+java:S1128"YRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.enums.PermissionType'.(½É¢ìùÿÿÿÿ
+i
+java:S1128"NRemove this unused import 'org.springframework.data.jpa.repository.Modifying'.(—·Ñ”þÿÿÿÿ

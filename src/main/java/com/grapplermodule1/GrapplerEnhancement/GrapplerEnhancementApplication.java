@@ -1,5 +1,6 @@
 package com.grapplermodule1.GrapplerEnhancement;
 import com.grapplermodule1.GrapplerEnhancement.controllers.UserController;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -8,6 +9,7 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @OpenAPIDefinition(
@@ -24,6 +26,11 @@ public class GrapplerEnhancementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GrapplerEnhancementApplication.class, args);
     System.out.println("Started");
+	}
+
+	@Bean
+	public ModelMapper getModelMapper() {
+		return new ModelMapper();
 	}
 
 }

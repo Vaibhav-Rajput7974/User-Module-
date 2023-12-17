@@ -1,0 +1,66 @@
+
+¡
+java:S1192°"„Define a constant instead of duplicating this literal "Get Project By User Id, Returning User in ResponseEntity, User Id  " 3 times.(ƒÔÁ—üÿÿÿÿ
+‘
+java:S1192Ÿ"uDefine a constant instead of duplicating this literal "UUID {} Exception In Get User By Id API Exception {}" 3 times.(¿ô›Áÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õŸ–Àøÿÿÿÿ
+¤
+java:S4449q"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(€”Ïıÿÿÿÿ
+¤
+java:S4449Y"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(¾ûô¾üÿÿÿÿ
+¥
+java:S4449Ñ"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(ÕÄÑœøÿÿÿÿ
+
+java:S4449z"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(€¼'
+ 
+java:S4449Õ"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(Ø Ì
+
+java:S4449~"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(€¼'
+¥
+java:S4449‚"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(¾ûô¾üÿÿÿÿ
+Ÿ
+java:S4449v"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(Ø Ì
+¥
+java:S4449Ù"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(¾ûô¾üÿÿÿÿ
+¤
+java:S4449V"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(ÕÄÑœøÿÿÿÿ
+ 
+java:S4449œ"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(Ø Ì
+¥
+java:S4449˜"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(ÕÄÑœøÿÿÿÿ
+¥
+java:S4449 "ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(¾ûô¾üÿÿÿÿ
+Q	java:S125/"<This block of commented-out lines of code should be removed.(Èíû
+v
+java:S3923K"[Remove this conditional structure or edit its code blocks so that they're not all the same.(–úÃ¢ùÿÿÿÿ
+V	java:S125M"<This block of commented-out lines of code should be removed.(¨…áîùÿÿÿÿ
+=
+java:S1452«"&Remove usage of generic wildcard type.(¨… æ
+=
+java:S1452ä"&Remove usage of generic wildcard type.(Õ‡·›
+i	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŠ€Íúÿÿÿÿ
+Q
+java:S1854‡":Remove this useless assignment to local variable "status".(º¹Üõ
+B
+java:S1452‚"&Remove usage of generic wildcard type.(ŸŠ€Íúÿÿÿÿ
+B
+java:S1481‡"+Remove this unused "status" local variable.(º¹Üõ
+B
+java:S1452¦"&Remove usage of generic wildcard type.(‘Ú¶ûÿÿÿÿ
+B
+java:S1452Ã"&Remove usage of generic wildcard type.(Ÿ¹Ù®ıÿÿÿÿ
+B
+java:S1452Ş"&Remove usage of generic wildcard type.(‹¤«Èøÿÿÿÿ
+z
+java:S1128"_Remove this unused import 'com.grapplermodule1.GrapplerEnhancement.validations.PostValidation'.(¢ÊŸûùÿÿÿÿ
+i
+java:S1128
+"SRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.entities.Users'.(ÃÑš›
+\
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Page'.(˜âüÿÿÿÿ
+^
+java:S1128"HRemove this unused import 'org.springframework.data.domain.PageRequest'.(ºêâÚ
+p
+java:S1128"URemove this unused import 'org.springframework.security.access.prepost.PreAuthorize'.(ˆ†×ùÿÿÿÿ
+J
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ

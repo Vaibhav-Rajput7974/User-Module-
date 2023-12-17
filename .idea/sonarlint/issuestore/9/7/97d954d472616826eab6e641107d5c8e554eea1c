@@ -1,0 +1,10 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ñÏ°Ü
+h
+java:S3305"RInject this field value directly into "filterChain", the only method that uses it.(ÓÏäË
+h
+java:S3305!"RInject this field value directly into "filterChain", the only method that uses it.(¸ßöú
+E
+java:S1611&"/Remove the parentheses around the "c" parameter(ñ×Ìé
+R
+java:S1611'"7Remove the parentheses around the "authorize" parameter(×Ñ¿ºúÿÿÿÿ

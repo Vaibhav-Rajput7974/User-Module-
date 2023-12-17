@@ -1,0 +1,24 @@
+
+‡
+java:S1192J"lDefine a constant instead of duplicating this literal "Get Team Member Details API Called, UUID {}" 3 times.(£â›ıÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õŸ–Àøÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(•İ8›ÄÕšÇ1
+M
+java:S3416"7Update this logger to use "TeamMemberController.class".(Üù¬ó
+A
+java:S1452*"&Remove usage of generic wildcard type.(åâ¤”ÿÿÿÿÿ
+;
+java:S1452G"&Remove usage of generic wildcard type.(¥‚>
+B
+java:S1452…"&Remove usage of generic wildcard type.(µÅüšùÿÿÿÿ
+Q	java:S125i"<This block of commented-out lines of code should be removed.(ãÛ¤³
+B
+java:S1452£"&Remove usage of generic wildcard type.(Ø®÷šşÿÿÿÿ
+B
+java:S1452Å"&Remove usage of generic wildcard type.(Ó…Ş¾øÿÿÿÿ
+z
+java:S1128"XRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.entities.Permission'.(ü¦¶Êşÿÿÿÿ8×ÄÕšÇ1
+p
+java:S1128"SRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.entities.Users'.(ÃÑš›8×ÄÕšÇ1
+w
+java:S1128"URemove this unused import 'org.springframework.security.access.prepost.PreAuthorize'.(ˆ†×ùÿÿÿÿ8×ÄÕšÇ1

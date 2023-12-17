@@ -83,10 +83,7 @@ public class Folder {
     @NotNull(message = "FolderType type must be provided")
     private FolderType folderType;
 
-    @JsonIgnore
-    //@JsonBackReference
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH} )
-    private Project parentProject;
+    private Long projectId;
 
     @JsonIgnore
 //    @JsonIdentityReference(alwaysAsId = true)//self Mapping

@@ -1,0 +1,11 @@
+
+f	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÅ•¯
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ß›•
+t	java:S116"ZRename this field "permission_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÙƒÈşÿÿÿÿ
+c	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’âÛå
+c	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÅ•¯
+]	java:S125-"<This block of commented-out lines of code should be removed.(ıñËúÿÿÿÿ8ëãöæÆ1
+e
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ş‘‹„8¯—èÆ1
+x
+java:S1128"VRemove this unused import 'com.grapplermodule1.GrapplerEnhancement.enums.AccessLevel'.(Á•‚Ğşÿÿÿÿ8ä€èÆ1

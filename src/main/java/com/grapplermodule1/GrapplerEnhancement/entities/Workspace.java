@@ -29,6 +29,7 @@ import lombok.NoArgsConstructor;
 	    generator = ObjectIdGenerators.PropertyGenerator.class,
 	    property = "id"
 )
+
 public class Workspace {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,12 +43,9 @@ public class Workspace {
 
 	 private LocalDateTime creationTime ;
 
-	@JsonBackReference
-	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private Company company;
+	private Long companyId;
 
 	@JsonManagedReference
 	@OneToMany(mappedBy = "workspace", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Project> projects;
-
 }

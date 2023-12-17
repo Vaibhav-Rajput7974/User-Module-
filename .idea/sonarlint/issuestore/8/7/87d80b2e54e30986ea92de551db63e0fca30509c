@@ -1,0 +1,12 @@
+
+q
+java:S1192'"VDefine a constant instead of duplicating this literal "Internal Server Error" 4 times.(Ô²Çşÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õŸ–Àøÿÿÿÿ
+C
+java:S1452"&Remove usage of generic wildcard type.(ÙÖ€¨8øŠñëÆ1
+C
+java:S1452,"&Remove usage of generic wildcard type.(˜ƒæë8üŠñëÆ1
+C
+java:S14528"&Remove usage of generic wildcard type.(íü¾ 8‹ñëÆ1
+C
+java:S1452D"&Remove usage of generic wildcard type.(ÚÉş8†‹ñëÆ1
