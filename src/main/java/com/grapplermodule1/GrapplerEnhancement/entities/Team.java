@@ -28,7 +28,7 @@ public class Team {
 
     @ManyToMany
     @JsonIgnore
-    private Set<Long> projectIds;
+    private Set<Project> projectSet;
 
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL)
     @JsonBackReference

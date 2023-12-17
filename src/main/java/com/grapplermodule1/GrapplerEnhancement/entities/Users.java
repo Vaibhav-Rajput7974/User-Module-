@@ -10,11 +10,13 @@
     import jakarta.validation.constraints.NotEmpty;
     import jakarta.validation.constraints.NotNull;
     import jakarta.validation.constraints.Size;
+    import lombok.Data;
 
     import java.util.List;
     
     @Entity
     @Table(name = "users")
+    @Data
     public class Users {
     
         @Id
@@ -72,92 +74,5 @@
 //        @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //        private List<TicketAssignment> ticketAssignment;
     
-        public Long getId() {
-            return id;
-        }
-    
-        public void setId(Long id) {
-            this.id = id;
-        }
-    
-        public String getName() {
-            return name;
-        }
-    
-        public void setName(String name) {
-            this.name = name;
-        }
-    
-        public String getEmail() {
-            return email;
-        }
-    
-        public void setEmail(String email) {
-            this.email = email;
-        }
-    
-        public String getDesignation() {
-            return designation;
-        }
-    
-        public void setDesignation(String designation) {
-            this.designation = designation;
-        }
-    
-        public String getPassword() {
-            return password;
-        }
-    
-        public void setPassword(String password) {
-            this.password = password;
-        }
-
-        public List<Users> getSubordinates() {
-            return subordinates;
-        }
-
-        public void setSubordinates(List<Users> subordinates) {
-            this.subordinates = subordinates;
-        }
-
-        public Users getReportingUser() {
-            return reportingUser;
-        }
-
-        public void setReportingUser(Users reportingUser) {
-            this.reportingUser = reportingUser;
-        }
-
-        public List<TeamMembers> getTeamMembers() {
-            return teamMembers;
-        }
-
-        public void setTeamMembers(List<TeamMembers> teamMembers) {
-            this.teamMembers = teamMembers;
-        }
-
-//        public List<Ticket> getTicket() {
-//            return ticket;
-//        }
-//
-//        public void setTicket(List<Ticket> ticket) {
-//            this.ticket = ticket;
-//        }
-//
-//        public List<TicketAssignment> getTicketAssignment() {
-//            return ticketAssignment;
-//        }
-//
-//        public void setTicketAssignment(List<TicketAssignment> ticketAssignment) {
-//            this.ticketAssignment = ticketAssignment;
-//        }
-
-        public Role getRole() {
-            return role;
-        }
-    
-        public void setRole(Role role) {
-            this.role = role;
-        }
 
     }

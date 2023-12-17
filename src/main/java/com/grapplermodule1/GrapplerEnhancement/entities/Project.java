@@ -50,10 +50,10 @@ public class Project {
 
 
 
-//    @ManyToMany
-//    @JsonBackReference
-//    @JoinTable(name = "project_team",
-//            joinColumns = @JoinColumn(name = "project_id"),
-//            inverseJoinColumns = @JoinColumn(name = "team_id"))
-//    private Set<Team> teams;
+    @ManyToMany
+    @JsonBackReference
+    @JoinTable(name = "project_team",
+            joinColumns = @JoinColumn(name = "project_id"),
+            inverseJoinColumns = @JoinColumn(name = "team_id"))
+    private Set<Team> teams;
 }

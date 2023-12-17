@@ -28,9 +28,9 @@ public class GrapplerEnhancementApplication {
     System.out.println("Started");
 	}
 
-	@Bean
-	public ModelMapper getModelMapper() {
-		return new ModelMapper();
-	}
+//	@Bean
+//	public ModelMapper getModelMapper() {
+//		return new ModelMapper();
+//	}
 
 }

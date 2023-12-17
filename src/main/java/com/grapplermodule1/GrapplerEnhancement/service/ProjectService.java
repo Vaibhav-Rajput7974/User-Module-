@@ -30,8 +30,8 @@ public class ProjectService {
     @Autowired
     private TeamService teamService;
 
-    @Autowired
-    private ModelMapper modelMapper;
+//    @Autowired
+//    private ModelMapper modelMapper;
 
     @Autowired
     private TeamRepository teamRepository;
@@ -46,26 +46,20 @@ public class ProjectService {
         String debugUuid = UUID.randomUUID().toString();
         try {
             log.info("Getting List of all Projects");
-            List<Project> projects = projectRepository.findAll();
-            if (!projects.isEmpty()) {
-                log.info("Got List of all Projects that is present in db");
-                List<ProjectDTO> projectDTOList = new ArrayList<>();
-                projects.forEach(project -> {
-                    ProjectDTO projectDTO = modelMapper.map(project, ProjectDTO.class);
-                    projectDTOList.add(projectDTO)
-                });
-                // Use map to convert Project to ProjectDTO and collect in the list
-//                projectDTOList = projects.stream()
-//                        .map(ProjectDTO::new)  // Assuming ProjectDTO has a constructor that takes a Project
-//                        .collect(Collectors.toList());
+            List<ProjectDTO> projectDTOList = projectRepository.findListOfProjects();
 
+            if (!projectDTOList.isEmpty()) {
+                log.info("Got List of all Projects that is present in db");
+                projectDTOList.forEach(projectDTO -> {
+                    projectDTO.setTeams(getTeamList(projectDTO.getId()));
+                });
                 return projectDTOList;
             } else {
                 log.info("Throws exception because there no project found with UUID {}", debugUuid);
                 throw new ProjectNotFoundException("Project not Found");
             }
         } catch (Exception e) {
-            log.error("Exception In Fetch All Projects Exception", e);
+            log.info("Exception In Fetch All Projects Exception {}", e.getMessage());
             throw e;
         }
     }
@@ -78,20 +72,15 @@ public class ProjectService {
     public List<TeamDTO> getTeamList(Long projectId) {
         try {
             log.info("Get Team By Id Called in Hierarchy Service");
-            List<Team> listOfTeams = teamRepository.findByProjectIds(projectId);
-            List<TeamDTO> teamDTOList = new ArrayList<>();
-            listOfTeams.forEach(team -> {
-                TeamDTO teamDTO = modelMapper.map(team,TeamDTO.class);
-                teamDTOList.add(teamDTO);
-            });
-            teamDTOList.forEach(ls -> {
+            List<TeamDTO> listOfTeams = teamRepository.searchTeamById(projectId);
+            listOfTeams.forEach(ls -> {
                 ls.setTeamMembers(teamService.getMembersList(ls.getId()));
             });
 
             if (!listOfTeams.isEmpty()) {
                 log.info("Get Team Member By Id returning List of TeamMemberDTO");
             }
-            return teamDTOList;
+            return listOfTeams;
         } catch (Exception e) {
             log.error("Exception In Get Members List Service in Hierarchy Service Exception {}", e.getMessage());
             throw e;
@@ -132,13 +121,11 @@ public class ProjectService {
         String debugUuid = UUID.randomUUID().toString();
         try {
             log.info("Fetching Project with id : " + projectId);
-            Optional<Project> projectOptional = projectRepository.findById(projectId);
-            if (projectOptional.isPresent()) {
-                Project project = projectOptional.get();
-                ProjectDTO projectDTO = modelMapper.map(project,ProjectDTO.class);
-
-                projectDTO.setTeams(getTeamList(project.getId()));
-                return projectDTO;
+            Optional<ProjectDTO> project = projectRepository.findProjectById(projectId);
+            if (project.isPresent()) {
+                log.info("Project found with id : " + projectId);
+                project.get().setTeams(getTeamList(project.get().getId()));
+                return project.get();
             } else {
                 log.error("Throws exception because there no project found with UUID {}", debugUuid);
                 throw new ProjectNotFoundException("Project not Found With Id: " + projectId);
@@ -257,7 +244,7 @@ public class ProjectService {
                 throw new TeamNotFoundException("No Teams Found with the given IDs");
             }
 
-            Set<Team> projectTeams = teamRepositoryam.();
+            Set<Team> projectTeams = project.getTeams();
 
             for (Team team : teams) {
                 if (projectTeams.contains(team)) {
@@ -279,4 +266,5 @@ public class ProjectService {
             throw e;
         }
     }
+
 }

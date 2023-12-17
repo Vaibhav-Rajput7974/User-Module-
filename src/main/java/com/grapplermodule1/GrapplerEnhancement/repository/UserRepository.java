@@ -27,7 +27,7 @@ public interface UserRepository extends JpaRepository<Users, Long> {
 
     @Query("SELECT NEW com.grapplermodule1.GrapplerEnhancement.dtos.UsersDTO(e.id, e.name, e.email, e.designation) " +
             "FROM Users e")
-  Page<UsersDTO> findAllUserByPagination(Pageable pageable);
+    Page<UsersDTO> findAllUserByPagination(Pageable pageable);
 
 
 
@@ -50,6 +50,4 @@ public interface UserRepository extends JpaRepository<Users, Long> {
 
 
     //List<ProjectDTO> findProjectByUserId(Long userId);
-
-
 }

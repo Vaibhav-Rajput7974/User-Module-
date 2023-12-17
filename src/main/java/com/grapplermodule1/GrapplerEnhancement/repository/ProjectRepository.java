@@ -16,18 +16,18 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
 
     boolean existsByName(String name);
 
-//    @Query("SELECT NEW com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO(p.id, p.name) FROM Project p ")
-//    List<ProjectDTO> findListOfProjects();
-//
-//    @Query("SELECT NEW com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO(p.id, p.name) FROM Project p WHERE p.id = :projectId")
-//    Optional<ProjectDTO> findProjectById(Long projectId);
+    @Query("SELECT NEW com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO(p.id, p.name) FROM Project p ")
+    List<ProjectDTO> findListOfProjects();
 
-//    @Query("SELECT NEW com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO(p.id, p.name) FROM Project p " +
-//            "INNER JOIN p.teams t " +
-//            "INNER JOIN t.teamMembers tm " +
-//            "INNER JOIN tm.user u " +
-//            "WHERE u.id = :userId")
-//    Optional<List<ProjectDTO>> findProjectsByUserId(Long userId);
+    @Query("SELECT NEW com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO(p.id, p.name) FROM Project p WHERE p.id = :projectId")
+    Optional<ProjectDTO> findProjectById(Long projectId);
+
+    @Query("SELECT NEW com.grapplermodule1.GrapplerEnhancement.dtos.ProjectDTO(p.id, p.name) FROM Project p " +
+            "INNER JOIN p.teams t " +
+            "INNER JOIN t.teamMembers tm " +
+            "INNER JOIN tm.user u " +
+            "WHERE u.id = :userId")
+    Optional<List<ProjectDTO>> findProjectsByUserId(Long userId);
 
     @Query("SELECT p FROM Project p JOIN p.teams t WHERE t.id = :teamId")
     List<Project> findProjectsByTeamId(@Param("teamId") Long teamId);
@@ -37,7 +37,7 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
             "INNER JOIN t.teamMembers tm " +
             "INNER JOIN tm.user u " +
             "WHERE u.email = :email")
-//    Optional<List<ProjectDTO>> findProjectsByUserEmail(String email);
+    Optional<List<ProjectDTO>> findProjectsByUserEmail(String email);
 
     List<Project> findAllByWorkspace_Id(Long workspaceId);
     Project findByWorkspace_IdAndId(Long workspaceId, Long projectId);
